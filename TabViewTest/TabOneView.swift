@@ -11,6 +11,7 @@ struct TabOneView: View {
     @State var isPresented = false
 
         var body: some View {
+            NavigationView {
             Button {
                 isPresented = true
             } label: {
@@ -22,6 +23,7 @@ struct TabOneView: View {
             }
             .fullScreenCover(isPresented: $isPresented) {
                 FullSheetView(isPresented: $isPresented)
+            }
             }
         }
 }
